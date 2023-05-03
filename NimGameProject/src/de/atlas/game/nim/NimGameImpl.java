@@ -11,6 +11,7 @@ public class NimGameImpl extends AbstractGame<Integer, Integer> {
         setBoard(23);
     }
 
+
     protected boolean isTurnValid() {
         return getTurn() >= 1 && getTurn() <= 3;
     }

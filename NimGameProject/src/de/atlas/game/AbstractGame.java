@@ -41,9 +41,12 @@ public abstract class AbstractGame<BOARD, TURN> implements Game{
     private List<GamePlayer<BOARD,TURN>> players = new ArrayList<>();
 
 
-
+    /**
+     *
+     * @param player
+     */
     public void addPlayer(GamePlayer<BOARD,TURN> player) {
-        players.add(player);
+        players.add(player); // nicht formaler Kommentar
     }
 
     public void removePlayer(GamePlayer<BOARD,TURN> player) {
@@ -64,16 +67,19 @@ public abstract class AbstractGame<BOARD, TURN> implements Game{
 
     @Override
     public void play() {
-        while(! isGameover()) {
-            playSingleRound();
-        }
+        while(! isGameover()) playSingleRound();
+
     }
 
     private void playSingleRound() {// Integration
-        for(GamePlayer<BOARD, TURN> player: players){
-            setCurrentPlayer(player);
-            playSingleTurnWithCurrentPlayer();
-        }
+        for(GamePlayer<BOARD, TURN> player: players) prepareSingleTurn(player);
+
+    }
+
+    private void prepareSingleTurn(final GamePlayer<BOARD, TURN> player) {
+        // TODO irgendwas wichtiges
+        setCurrentPlayer(player);
+        playSingleTurnWithCurrentPlayer();
     }
 
     private void playSingleTurnWithCurrentPlayer() {
@@ -83,9 +89,7 @@ public abstract class AbstractGame<BOARD, TURN> implements Game{
     }
 
     private void executeTurn() {
-        do {
-            turn = getCurrentPlayer().doTurn(board);
-        } while(turnIsInvalid());
+        do turn = getCurrentPlayer().doTurn(board); while(turnIsInvalid());
 
     }
 
@@ -102,9 +106,8 @@ public abstract class AbstractGame<BOARD, TURN> implements Game{
         return false;
     }
     private void printGameOverMessageIfGameIsOver() { // Operation
-        if(isGameover()) {
-            write(String.format("%s hat verloren", currentPlayer.getName()));
-        }
+        if(isGameover()) write(String.format("%s hat verloren", currentPlayer.getName()));
+
     }
 
     protected void write(String message) {

@@ -6,10 +6,10 @@ public abstract class AbstracGamePlayer<BOARD,TURN> implements GamePlayer<BOARD,
 
     private String name = getClass().getSimpleName();
 
-    public AbstracGamePlayer() {
+    protected AbstracGamePlayer() {
     }
 
-    public AbstracGamePlayer(final String name) {
+    protected AbstracGamePlayer(final String name) {
         this.name = name;
     }
 

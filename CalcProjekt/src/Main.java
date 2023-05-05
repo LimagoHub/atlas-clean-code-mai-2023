@@ -1,8 +1,6 @@
 import client.CalcClient;
-import math.Calculator;
-import math.CalculatorImpl;
-import math.CalculatorLogger;
-import math.CalculatorSecure;
+import common.LoggerProxy;
+import math.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,9 +9,11 @@ public class Main {
         Calculator calculator = new CalculatorImpl();
         // 2000                               1000
         //calculator = new CalculatorLogger(calculator);
+        calculator = (Calculator) LoggerProxy.newInstance(calculator);
         // 3000                             2000
         calculator = new CalculatorSecure(calculator);
 
+        calculator = new CalculatorBenchmark(calculator);
                                             // 3000
         CalcClient client = new CalcClient(calculator);
         client.run();

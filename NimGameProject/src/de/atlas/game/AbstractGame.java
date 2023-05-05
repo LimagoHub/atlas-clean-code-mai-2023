@@ -16,7 +16,7 @@ public abstract class AbstractGame<BOARD, TURN> implements Game{
     private BOARD board;
     private TURN turn;
 
-    public AbstractGame(final Writer writer) {
+    protected  AbstractGame(final Writer writer) {
         this.writer = writer;
     }
 
@@ -77,7 +77,7 @@ public abstract class AbstractGame<BOARD, TURN> implements Game{
     }
 
     private void prepareSingleTurn(final GamePlayer<BOARD, TURN> player) {
-        // TODO irgendwas wichtiges
+
         setCurrentPlayer(player);
         playSingleTurnWithCurrentPlayer();
     }

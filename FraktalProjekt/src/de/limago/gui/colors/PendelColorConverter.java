@@ -5,7 +5,7 @@ public class PendelColorConverter implements ColorConverter{
     @Override
     public int convert(final int i) {
 
-        assert i >=0 && i <= 3;
+        if(! (i >=0 && i <= 3)) throw new IllegalArgumentException("Upps");
         return colors[i];
     }
 }

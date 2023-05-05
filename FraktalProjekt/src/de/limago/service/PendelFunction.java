@@ -2,8 +2,6 @@ package de.limago.service;
 
 import de.limago.math.Complex;
 
-import java.util.function.Function;
-
 public class PendelFunction implements ComplexToIntFunction {
     @Override
     public int apply(final Complex complex) {

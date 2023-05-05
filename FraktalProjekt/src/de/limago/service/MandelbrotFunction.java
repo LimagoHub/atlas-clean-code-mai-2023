@@ -2,8 +2,6 @@ package de.limago.service;
 
 import de.limago.math.Complex;
 
-import java.util.function.Function;
-
 public class MandelbrotFunction implements ComplexToIntFunction {
 
     private static final int MAXITER = 255;

@@ -2,7 +2,6 @@ package de.limago.gui.presenter;
 
 import de.limago.gui.PixelView;
 import de.limago.service.PixelSupplier;
-import de.limago.service.PixelSupplierComplexSurfaceToPixelSurfaceImpl;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

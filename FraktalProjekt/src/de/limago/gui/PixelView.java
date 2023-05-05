@@ -9,7 +9,7 @@ public interface PixelView {
     void setPresenter(final PixelViewPresenter presenter);
     PixelViewPresenter getPresenter();
     void setPixels(int [] feld);
-    // int[] getPixels();
+
 
 
     void show();

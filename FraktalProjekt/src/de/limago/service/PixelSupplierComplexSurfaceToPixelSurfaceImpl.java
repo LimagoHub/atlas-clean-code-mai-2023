@@ -1,14 +1,12 @@
 package de.limago.service;
 
 import de.limago.gui.colors.ColorConverter;
-import de.limago.gui.colors.MandelbrotColorConverter;
 import de.limago.gui.colors.PendelColorConverter;
 import de.limago.math.Complex;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 public class PixelSupplierComplexSurfaceToPixelSurfaceImpl implements PixelSupplier{
 
@@ -33,12 +31,13 @@ public class PixelSupplierComplexSurfaceToPixelSurfaceImpl implements PixelSuppl
         try {
             return getImpl();
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             throw new RuntimeException(e);
         }
     }
 
     private int[] getImpl() throws InterruptedException {
-        int feld [] = new int[size*size];
+        int [] feld = new int[size*size];
         calculatePixelsParallel(feld);
         return feld;
     }
@@ -59,14 +58,14 @@ public class PixelSupplierComplexSurfaceToPixelSurfaceImpl implements PixelSuppl
     @Override
     public PixelSupplier zoomFromPixels(final int x, final int y, final int x2, final int y2) {
         final Complex upperRightCorner = generateComplexNumberFromPixel(x2,y2);
-        final Complex lowerLeftCorner = generateComplexNumberFromPixel(x,y);
-        final double hoehe = upperRightCorner.im() - lowerLeftCorner.im();
-        final double breite = upperRightCorner.re() - lowerLeftCorner.re();
+        final Complex lowerLeftCornerLocal = generateComplexNumberFromPixel(x,y);
+        final double hoehe = upperRightCorner.im() - lowerLeftCornerLocal.im();
+        final double breite = upperRightCorner.re() - lowerLeftCornerLocal.re();
         return PixelSupplierComplexSurfaceToPixelSurfaceImpl
                 .builder()
                 .pixelSize(size)
                 .width(hoehe > breite? hoehe : breite)
-                .lowerLeftCorner(lowerLeftCorner)
+                .lowerLeftCorner(lowerLeftCornerLocal)
                 .colorConverter(colorConverter)
                 .function(function)
                 .build();

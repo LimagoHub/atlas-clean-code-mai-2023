@@ -34,8 +34,6 @@ public class BenchmarkProxy implements java.lang.reflect.InvocationHandler {
         } catch (Exception e) {
             throw new RuntimeException("unexpected invocation exception: " +
                     e.getMessage());
-        } finally {
-
         }
         return result;
     }

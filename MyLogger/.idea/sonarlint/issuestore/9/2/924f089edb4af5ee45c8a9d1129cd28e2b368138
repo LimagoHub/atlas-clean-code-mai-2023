@@ -1,0 +1,18 @@
+
+7
+java:S1220""Move this file to a named package.8‚‘Ş†‰1
+
+java:S1186
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘8‡‘Ş†‰1
+I
+java:S1128",Remove this unused import 'logger.MyLogger'.(›Ã›Ê8‰‘Ş†‰1
+L
+java:S1128"0Remove this unused import 'math.Multiplizierer'.(‡¶48‰‘Ş†‰1
+Q
+java:S1128"4Remove this unused import 'math.MultipliziererImpl'.(õ’©™8‰‘Ş†‰1
+T
+java:S1128"2Remove this unused import 'writer.ConsolenWriter'.(·ìŞÎúÿÿÿÿ8Š‘Ş†‰1
+L
+java:S1128"*Remove this unused import 'writer.Writer'.(ˆãĞÿÿÿÿÿ8Š‘Ş†‰1
+R
+java:S1128"5Remove this unused import 'java.util.logging.Logger'.(ƒ¥óš8‹‘Ş†‰1

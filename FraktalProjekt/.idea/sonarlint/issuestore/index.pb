@@ -3,3 +3,36 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+X
+(src/de/limago/common/BenchmarkProxy.java,f\b\fb1fef59d808c8fd9826058796e00912ace8c8d9
+_
+/src/de/limago/service/ComplexToIntFunction.java,3\4\34e689a634cb8fa5b5253c60f16dc346af9dd81c
+X
+(src/de/limago/service/PixelSupplier.java,3\9\390be51de92d1f0f211fe6993bb95eb835ac9344
+x
+Hsrc/de/limago/service/PixelSupplierComplexSurfaceToPixelSurfaceImpl.java,9\a\9a2c16ae119bd0ebd3eeec0b6b21781ed72d4867
+O
+src/de/limago/math/Complex.java,5\1\515f0abc2f9769ce7c5decf24dee5d4d7808185d
+P
+ src/de/limago/gui/PixelView.java,e\3\e3141a8340b51bac841b83a6a2743a1c25e5322b
+c
+3src/de/limago/gui/presenter/PixelViewPresenter.java,d\1\d1b6697fc8d7f05d698d29162293387fa3b0892e
+g
+7src/de/limago/gui/presenter/PixelViewPresenterImpl.java,0\b\0b8f48afb1042b204a42697a28cc3955a41dbac2
+\
+,src/de/limago/gui/colors/ColorConverter.java,4\6\46c1f556614b798dc0ac49ef59b816145f69bddf
+f
+6src/de/limago/gui/colors/MandelbrotColorConverter.java,2\1\215be72c3346b1364ef8fde5f9bde44ad6632145
+b
+2src/de/limago/gui/colors/PendelColorConverter.java,e\b\eb92e7fe21dcdf50817ba921160c53fa5908d994
+T
+$src/de/limago/gui/PixelViewImpl.java,0\4\041d0901169135d7ad4b2234bfd0dda41518eebe
+S
+#src/de/limago/application/Main.java,e\6\e658272a61d4925048aad25fc577367aeddcc6ce
+]
+-src/de/limago/service/MandelbrotFunction.java,e\f\ef92808ad5a7fea2c46b320ef79f08da03f2c061
+Y
+)src/de/limago/service/PendelFunction.java,b\8\b8724e86f245cc7222301470479a0d4dbc45cb1e

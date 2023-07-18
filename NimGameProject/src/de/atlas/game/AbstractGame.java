@@ -103,6 +103,9 @@ public abstract class AbstractGame<BOARD, TURN> implements Game{
             write("Ungueltiger Zug.");
             return true;
         }
+
+
+
         return false;
     }
     private void printGameOverMessageIfGameIsOver() { // Operation

@@ -38,7 +38,7 @@ public class PixelViewImpl implements PixelView {
     @Override
     public void setPixels(final int[] feld) {
 
-        assert feld.length == SIZE * SIZE;
+
         image.setRGB(0,0,SIZE,SIZE, feld,0, SIZE);
         window.repaint();
     }
